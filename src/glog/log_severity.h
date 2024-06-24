@@ -97,7 +97,7 @@ extern GOOGLE_GLOG_DLL_DECL const char* const LogSeverityNames[NUM_SEVERITIES];
 //   #endif
 //
 #ifdef NDEBUG
-enum { DEBUG_MODE = 0 };
+constexpr bool DEBUG_MODE = false;
 #define IF_DEBUG_MODE(x)
 #else
 enum { DEBUG_MODE = 1 };
