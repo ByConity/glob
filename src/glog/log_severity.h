@@ -96,12 +96,12 @@ extern GOOGLE_GLOG_DLL_DECL const char* const LogSeverityNames[NUM_SEVERITIES];
 //     DCHECK(Foo(&error)) << error;
 //   #endif
 //
-#ifdef NDEBUG
-constexpr bool DEBUG_MODE = false;
-#define IF_DEBUG_MODE(x)
-#else
-enum { DEBUG_MODE = 1 };
-#define IF_DEBUG_MODE(x) x
-#endif
+// #ifdef NDEBUG
+// enum { DEBUG_MODE = 0 };
+// #define IF_DEBUG_MODE(x)
+// #else
+// enum { DEBUG_MODE = 1 };
+// #define IF_DEBUG_MODE(x) x
+// #endif
 
 #endif  // BASE_LOG_SEVERITY_H__
